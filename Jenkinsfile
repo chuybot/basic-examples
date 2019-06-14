@@ -32,14 +32,14 @@ pipeline {
         }
         stage('d1') {
           steps {
-            sh 'ls2'
+            sh 'ls'
           }
         }
         stage('d3') {
           steps {
             dir(path: '/tmp') {
               sh 'ls'
-              sh 'abcd'
+              sh 'echo abcd'
             }
 
           }
