@@ -38,7 +38,7 @@ pipeline {
         stage('d3') {
           steps {
             dir(path: '/tmp') {
-              sh 'ls'
+              sh 'echo eee'
               sh 'echo abcd'
             }
 
