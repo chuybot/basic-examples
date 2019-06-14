@@ -33,7 +33,7 @@ pipeline {
         stage('d1') {
           steps {
             sh 'ls'
-            sh '[ ! -d cookies ] && mkdir cookies'
+            sh 'mkdir -p cookies'
           }
         }
         stage('d3') {
