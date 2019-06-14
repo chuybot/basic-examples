@@ -33,11 +33,12 @@ pipeline {
         stage('d1') {
           steps {
             sh 'ls'
+            sh 'mkdir cookies'
           }
         }
         stage('d3') {
           steps {
-            dir(path: '/tmp') {
+            dir(path: 'cookies') {
               sh 'echo eee'
               sh 'echo abcd'
             }
