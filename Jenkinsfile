@@ -13,7 +13,7 @@ pipeline {
     stage('b') {
       steps {
         timeout(unit: 'HOURS', time: 2) {
-          sh "echo c${A}sa"
+          sh "echo c$Asa"
           sh 'ls'
         }
 
