@@ -45,7 +45,7 @@ pipeline {
 
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             timeout(unit: 'HOURS', time: 2) {
               sh 'ls'
@@ -61,9 +61,15 @@ pipeline {
       }
     }
   }
+  environment {
+    aaad = 'a'
+    bfdasf = 'b'
+  }
   post {
     always {
       deleteDir()
+
     }
+
   }
 }
