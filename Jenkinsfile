@@ -1,5 +1,9 @@
 pipeline {
   agent any
+    environment {
+    aaad = 'a'
+    bfdasf = 'b'
+  }
   stages {
     stage('a') {
       steps {
@@ -9,7 +13,7 @@ pipeline {
     stage('b') {
       steps {
         timeout(unit: 'HOURS', time: 2) {
-          sh 'ls'
+          sh 'echo c${a}sa'
           sh 'ls'
         }
 
@@ -61,10 +65,7 @@ pipeline {
       }
     }
   }
-  environment {
-    aaad = 'a'
-    bfdasf = 'b'
-  }
+
   post {
     always {
       deleteDir()
