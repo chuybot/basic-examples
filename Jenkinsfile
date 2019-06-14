@@ -10,7 +10,7 @@ pipeline {
       steps {
         timeout(unit: 'HOURS', time: 2) {
           sh 'ls'
-          sh 'ls12'
+          sh 'ls'
         }
 
       }
